@@ -1,6 +1,6 @@
 # chatgpt-grep
 
-A utility script to search for specific messages within a ChatGPT data export and retrieve the titles of chats, and URLs linking back to conversations containing those messages.
+A utility script to search for specific messages within a ChatGPT data export and retrieve the titles of chats, and date of conversations containing those messages.
 
 ## Background
 
