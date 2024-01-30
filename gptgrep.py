@@ -10,7 +10,7 @@ def find_chat_titles_and_dates_by_message(search_term, data):
     for chat in data:
         title = chat.get('title', '')
         update_time = chat.get('update_time', None)
-        formatted_time = datetime.fromtimestamp(update_time).strftime('%B %d, %Y %H:%M:%S') if update_time else "Unknown time"
+        datetime_obj = datetime.fromtimestamp(update_time) if update_time else None
         for message_id, message_data in chat.get('mapping', {}).items():
             message_details = message_data.get('message', {})
             if not message_details:  # Skip if message details is None or empty
@@ -21,19 +21,24 @@ def find_chat_titles_and_dates_by_message(search_term, data):
             for part in parts:
                 if isinstance(part, dict):
                     if part.get('content_type') == 'image_asset_pointer':
-                        continue # Skip image entries
+                        continue  # Skip image entries
                     message_text += part.get('text', '')
                 else:
                     message_text += part
             message_text = message_text.lower()
             if search_term.lower() in message_text:
                 match = {
-                    'date': formatted_time,
+                    'datetime': datetime_obj,
+                    'date': datetime_obj.strftime('%B %d, %Y %H:%M:%S') if datetime_obj else "Unknown time",
                     'title': title
                 }
                 matches.append(match)
                 break
-    matches.sort(reverse=True, key=lambda x: x['date'])  # Sort by timestamp
+    # Sort by the datetime object
+    matches.sort(reverse=True, key=lambda x: x['datetime'])
+    # Remove the datetime object from final output
+    for match in matches:
+        del match['datetime']
     return matches
 
 def main(zip_filepath, search_term):
@@ -54,3 +59,4 @@ if __name__ == "__main__":
         print("Usage: gptgrep.py path_to_export.zip search_term")
     else:
         main(sys.argv[1], sys.argv[2])
+
