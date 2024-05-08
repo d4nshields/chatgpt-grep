@@ -21,7 +21,7 @@ $ ./gptgrep.py path_to_your_data_export.zip "Your target message here"
 - Outputs the titles and URL links back to all chats that contain the target message.
 - Easy extraction from the exported `.zip` without needing manual unzipping.
 
-## Example
+## Basic Usage
 
 ```
 % ./gptgrep.py ~/Downloads/a8d0cee5d7853270947c973b3be9d96370cbe76cfd7e3dc26a2714bbcddca106-2023-08-21-13-36-46.zip "my future self"    
@@ -30,6 +30,14 @@ chatgpt-grep:
   title: ChatGPT Grep
 - date: August 21, 2023 09:51:02
   title: Create Pull Request from Cloned Repo
+```
+
+## Including context around matches
+
+  Use the --context option to specify the number of preceding (parent) and following (child) conversation nodes you wish to include in the output. The format is --context="prev,next" where prev is the number of preceding parent nodes, and next is the number of following child nodes.
+
+```bash
+$ ./gptgrep.py --context="2,3" path_to_your_data_export.zip "Your target message here"
 ```
   
 ## Dependencies
