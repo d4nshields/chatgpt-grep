@@ -1,0 +1,209 @@
+[
+   {
+      "conversation_id" : "139df800-eb3e-4381-ad3a-422bfaafbbad",
+      "conversation_template_id" : null,
+      "create_time" : 1715196239.17399,
+      "current_node" : "aef10456-4b9d-43f1-85f8-941f970d51ba",
+      "default_model_slug" : "text-davinci-002-render-sha",
+      "gizmo_id" : null,
+      "id" : "139df800-eb3e-4381-ad3a-422bfaafbbad",
+      "is_archived" : false,
+      "mapping" : {
+         "160aab5a-b0a7-428e-9ab9-f7564f06d690" : {
+            "children" : [
+               "aaa2790c-00ab-4b84-b389-8d6be2abb112"
+            ],
+            "id" : "160aab5a-b0a7-428e-9ab9-f7564f06d690",
+            "message" : {
+               "author" : {
+                  "metadata" : {},
+                  "name" : null,
+                  "role" : "system"
+               },
+               "content" : {
+                  "content_type" : "text",
+                  "parts" : [
+                     ""
+                  ]
+               },
+               "create_time" : null,
+               "end_turn" : true,
+               "id" : "160aab5a-b0a7-428e-9ab9-f7564f06d690",
+               "metadata" : {
+                  "is_visually_hidden_from_conversation" : true
+               },
+               "recipient" : "all",
+               "status" : "finished_successfully",
+               "update_time" : null,
+               "weight" : 0
+            },
+            "parent" : "aaa1ddc1-0149-42bb-a476-1e3c9d3a5729"
+         },
+         "aaa1ddc1-0149-42bb-a476-1e3c9d3a5729" : {
+            "children" : [
+               "160aab5a-b0a7-428e-9ab9-f7564f06d690"
+            ],
+            "id" : "aaa1ddc1-0149-42bb-a476-1e3c9d3a5729",
+            "message" : null,
+            "parent" : null
+         },
+         "aaa2790c-00ab-4b84-b389-8d6be2abb112" : {
+            "children" : [
+               "e8513047-466a-4221-afc2-60508f7326d4"
+            ],
+            "id" : "aaa2790c-00ab-4b84-b389-8d6be2abb112",
+            "message" : {
+               "author" : {
+                  "metadata" : {},
+                  "name" : null,
+                  "role" : "user"
+               },
+               "content" : {
+                  "content_type" : "text",
+                  "parts" : [
+                     "I feel like today is going to be a great day!"
+                  ]
+               },
+               "create_time" : 1715196239.17551,
+               "end_turn" : null,
+               "id" : "aaa2790c-00ab-4b84-b389-8d6be2abb112",
+               "metadata" : {
+                  "message_type" : null,
+                  "request_id" : "880bd3cd9ac3aae2-YYZ",
+                  "timestamp_" : "absolute"
+               },
+               "recipient" : "all",
+               "status" : "finished_successfully",
+               "update_time" : null,
+               "weight" : 1
+            },
+            "parent" : "160aab5a-b0a7-428e-9ab9-f7564f06d690"
+         },
+         "aaa2d249-5555-4160-bda5-818c67c179f7" : {
+            "children" : [
+               "aef10456-4b9d-43f1-85f8-941f970d51ba"
+            ],
+            "id" : "aaa2d249-5555-4160-bda5-818c67c179f7",
+            "message" : {
+               "author" : {
+                  "metadata" : {},
+                  "name" : null,
+                  "role" : "user"
+               },
+               "content" : {
+                  "content_type" : "text",
+                  "parts" : [
+                     "I've been running daily for a while now and I am up to almost 25km per week.    My time in the morning before work it super-tight so I am going to try to increase my speed instead of the length of time spent running.   I only have about 30 minutes in the morning to exercise.   I hope that's enough."
+                  ]
+               },
+               "create_time" : 1715196336.62657,
+               "end_turn" : null,
+               "id" : "aaa2d249-5555-4160-bda5-818c67c179f7",
+               "metadata" : {
+                  "message_type" : null,
+                  "request_id" : "880bd62ecad3ab36-YYZ",
+                  "timestamp_" : "absolute"
+               },
+               "recipient" : "all",
+               "status" : "finished_successfully",
+               "update_time" : null,
+               "weight" : 1
+            },
+            "parent" : "e8513047-466a-4221-afc2-60508f7326d4"
+         },
+         "aef10456-4b9d-43f1-85f8-941f970d51ba" : {
+            "children" : [],
+            "id" : "aef10456-4b9d-43f1-85f8-941f970d51ba",
+            "message" : {
+               "author" : {
+                  "metadata" : {},
+                  "name" : null,
+                  "role" : "assistant"
+               },
+               "content" : {
+                  "content_type" : "text",
+                  "parts" : [
+                     "That's fantastic progress with your running routine! Increasing your speed within a time constraint is a great strategy when your schedule is tight. Thirty minutes can be quite effective for a focused, high-intensity workout. You might consider incorporating interval training into your routine, alternating between bursts of high-intensity running and periods of recovery. This can help improve your speed and endurance within the limited time frame. Remember to listen to your body and gradually increase the intensity to avoid overexertion. Keep up the dedication, and you'll continue to see improvements!"
+                  ]
+               },
+               "create_time" : 1715196339.29225,
+               "end_turn" : true,
+               "id" : "aef10456-4b9d-43f1-85f8-941f970d51ba",
+               "metadata" : {
+                  "citations" : [],
+                  "default_model_slug" : "text-davinci-002-render-sha",
+                  "finish_details" : {
+                     "stop_tokens" : [
+                        100260
+                     ],
+                     "type" : "stop"
+                  },
+                  "gizmo_id" : null,
+                  "is_complete" : true,
+                  "message_type" : null,
+                  "model_slug" : "text-davinci-002-render-sha",
+                  "pad" : "AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "parent_id" : "aaa2d249-5555-4160-bda5-818c67c179f7",
+                  "request_id" : "880bd62ecad3ab36-YYZ",
+                  "timestamp_" : "absolute"
+               },
+               "recipient" : "all",
+               "status" : "finished_successfully",
+               "update_time" : null,
+               "weight" : 1
+            },
+            "parent" : "aaa2d249-5555-4160-bda5-818c67c179f7"
+         },
+         "e8513047-466a-4221-afc2-60508f7326d4" : {
+            "children" : [
+               "aaa2d249-5555-4160-bda5-818c67c179f7"
+            ],
+            "id" : "e8513047-466a-4221-afc2-60508f7326d4",
+            "message" : {
+               "author" : {
+                  "metadata" : {},
+                  "name" : null,
+                  "role" : "assistant"
+               },
+               "content" : {
+                  "content_type" : "text",
+                  "parts" : [
+                     "That's the spirit! Embracing positivity can set the tone for your day and attract good vibes. What makes you feel like today will be particularly great?"
+                  ]
+               },
+               "create_time" : 1715196240.284,
+               "end_turn" : true,
+               "id" : "e8513047-466a-4221-afc2-60508f7326d4",
+               "metadata" : {
+                  "citations" : [],
+                  "default_model_slug" : "text-davinci-002-render-sha",
+                  "finish_details" : {
+                     "stop_tokens" : [
+                        100260
+                     ],
+                     "type" : "stop"
+                  },
+                  "gizmo_id" : null,
+                  "is_complete" : true,
+                  "message_type" : null,
+                  "model_slug" : "text-davinci-002-render-sha",
+                  "pad" : "AAAA",
+                  "parent_id" : "aaa2790c-00ab-4b84-b389-8d6be2abb112",
+                  "request_id" : "880bd3cd9ac3aae2-YYZ",
+                  "timestamp_" : "absolute"
+               },
+               "recipient" : "all",
+               "status" : "finished_successfully",
+               "update_time" : null,
+               "weight" : 1
+            },
+            "parent" : "aaa2790c-00ab-4b84-b389-8d6be2abb112"
+         }
+      },
+      "moderation_results" : [],
+      "plugin_ids" : null,
+      "safe_urls" : [],
+      "title" : "Great Day Ahead!",
+      "update_time" : 1715196339.40742
+   }
+]
