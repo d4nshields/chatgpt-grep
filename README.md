@@ -1,15 +1,15 @@
 # chatgpt-grep
 
-A utility script to search for specific messages within a ChatGPT data export and retrieve the titles of chats, and date of conversations containing those messages.
+A utility script designed to search for specific messages within a ChatGPT data export and to retrieve the titles of chats along with the dates of conversations containing those messages.
 
 ## Background
 
-When users export their data from ChatGPT, the provided JSON structure can be a bit challenging to navigate due to its nested structure. This tool helps users easily identify the titles of chats based on a keyword or phrase search.
+Navigating the nested structure of JSON in ChatGPT data exports can be challenging. This tool simplifies the process by enabling users to identify chat titles based on a keyword or phrase.
 
 ## Usage
 
-1. First, you'll need to download your ChatGPT data export, which will be in a `.zip` format.
-2. Then, execute the script with the path to your `.zip` file and the target message you're searching for.
+1. Download your ChatGPT data export, which will be provided in a `.zip` file format.
+2. Execute the script by specifying the path to your `.zip` file along with the target message you're searching for:
 
 ```bash
 $ ./gptgrep.py path_to_your_data_export.zip "Your target message here"
@@ -17,21 +17,29 @@ $ ./gptgrep.py path_to_your_data_export.zip "Your target message here"
 
 ## Features
 
-- Case-insensitive search within messages.
-- Outputs the titles and URL links back to all chats that contain the target message.
-- Easy extraction from the exported `.zip` without needing manual unzipping.
+- **Case-Insensitive Search**: Performs a case-insensitive search within messages.
+- **Direct Output**: Outputs the titles and datestamp for all chats that contain the target message.
+- **Zip Extraction**: Automatically extracts data from the exported `.zip` file without manual intervention.
 
-## Example
+## Basic Usage Example
 
-```
-% ./gptgrep.py ~/Downloads/a8d0cee5d7853270947c973b3be9d96370cbe76cfd7e3dc26a2714bbcddca106-2023-08-21-13-36-46.zip "my future self"    
+```bash
+$ ./gptgrep.py ~/Downloads/a8d0cee5d7853270947c973b3be9d96370cbe76cfd7e3dc26a2714bbcddca106-2023-08-21-13-36-46.zip "my future self"
 chatgpt-grep:
 - date: August 22, 2023 15:52:21
   title: ChatGPT Grep
 - date: August 21, 2023 09:51:02
   title: Create Pull Request from Cloned Repo
 ```
-  
+
+## Including Context Around Matches
+
+To include additional context around matches, use the `--context` option. This option allows you to specify the number of preceding (parent) and following (child) conversation nodes included in the output. Format the option as `--context="prev,next"`, where `prev` is the number of preceding parent nodes and `next` is the number of following child nodes.
+
+```bash
+$ ./gptgrep.py --context="2,3" path_to_your_data_export.zip "Your target message here"
+```
+
 ## Dependencies
 
 - Python 3
@@ -43,4 +51,3 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
